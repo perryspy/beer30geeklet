@@ -8,12 +8,15 @@
 	ZmZmAAAAgyyI4T6G
 	</data>
 	<key>Command</key>
-	<string>#!/bin/bash
+	<string>
 
-echo beer light:
+#!/bin/bash
 
-curl -ks https://beer30.sparcedge.com/beer30.json | python -m json.tool | grep state | sed -e 's/    "state": "//g' | sed -e 's/",//g'
-</string>
+STATUS=$(curl -ks https://beer30.sparcedge.com/beer30.json | python -m json.tool | grep state | sed -e 's/    "state": "//g' | sed -e 's/",//g')
+
+echo beer light: $STATUS
+
+	</string>
 	<key>DropShadow</key>
 	<false/>
 	<key>FailureImage</key>
@@ -110,7 +113,7 @@ curl -ks https://beer30.sparcedge.com/beer30.json | python -m json.tool | grep s
 	<key>FontSize</key>
 	<real>36</real>
 	<key>GeekletFrame</key>
-	<string>{{1242.64453125, 19.984375}, {200, 90}}</string>
+	<string>{{1131.05078125, 20.13671875}, {309, 45}}</string>
 	<key>HasShadow</key>
 	<false/>
 	<key>Identifier</key>
@@ -213,7 +216,7 @@ curl -ks https://beer30.sparcedge.com/beer30.json | python -m json.tool | grep s
 	<key>TextColor</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
-	ZmZmAQAAAYY=
+	ZmZmg8QSdz+DxBJ3P4PEEnc/AYY=
 	</data>
 	<key>TextStrikethrough</key>
 	<integer>0</integer>
